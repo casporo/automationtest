@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 
@@ -17,7 +18,9 @@ public class mainScenario {
     public void new_customer() throws Throwable {
 
         WebDriverManager.getInstance(CHROME).setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        driver = new ChromeDriver(options);
     }
 
     @And("^access to MoneyLion website$")
