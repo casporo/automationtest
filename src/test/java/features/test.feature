@@ -3,7 +3,7 @@ Feature: Create a runnable test automation project
   Test should verify the following scenarios
 
   @Scenario1
-    Scenario:
+    Scenario: Able to access MoneyLion about page successfully
     Given I am a new customer
     And access to MoneyLion website
     When I hover on "About Us" and click "About Us" at the top of the webpage
@@ -24,4 +24,15 @@ Feature: Create a runnable test automation project
       |first  | Steady Income Portfolio |
       |fourth  | Moderate Portfolio |
       |seventh  | Equity Only Portfolio |
+
+  @Scenario3
+  Scenario: Able to verify grade for Credit Utilization
+    Given I am a new customer
+    And access to MoneyLion website
+    When I click on "Credit Builder Loans" at the bottom of the page
+    And I scroll to view the "Track Your Credit While You Build" section
+    And I select "Credit Utilization"
+    And I change the credit utilization percentage to 20%
+    Then I should be able to see the grade is now displayed as B
+
 

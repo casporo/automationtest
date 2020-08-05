@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Th;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -34,8 +35,10 @@ public class mainScenario {
     @And("^access to MoneyLion website$")
     public void accessing_MoneyLion_site() throws Throwable {
        driver.get("https://www.moneylion.com/");
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion.jpg");
     }
 
+    //=========================== Selenium codes for Scenario "Able to access MoneyLion about page successfully"============================================
     @When("^I hover on \"About Us\" and click \"About Us\" at the top of the webpage$")
     public void hoverOn_AboutUs() throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -81,6 +84,7 @@ public class mainScenario {
         driver.close();
     }
 
+    //=========================== Selenium codes for Scenario " Able to verify the portfolio types" ===========================================
     @When("^I hover on \"Products\" and click on \"Auto investing\" at the top of the webpage$")
     public void hoverOn_Products() throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -120,7 +124,7 @@ public class mainScenario {
     }
 
     @When("^I select \'([^\"]*)\' portfolio on the slider$")
-    public void portfolioSlider(String options) {
+    public void portfolioSlider(String options) throws Throwable {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[4]/div/div/div[1]/div/div[1]/div/span")));
@@ -170,7 +174,7 @@ public class mainScenario {
     }
 
     @Then("^I should be able to see \'([^\"]*)\' displayed$")
-    public void portfolioName(String portfolioName) {
+    public void portfolioName(String portfolioName) throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement selectedPortfolio = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.slider-item.is-active")));
@@ -185,4 +189,69 @@ public class mainScenario {
         }
         driver.close();
     }
+
+    //=========================== Selenium codes for Scenario " Able to verify grade for Credit Utilization" ==================================
+    @When("^I click on \"Credit Builder Loans\" at the bottom of the page$")
+    public void creditBuilderLoans() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement creditBuilderLoans = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/footer/div[1]/div[2]/div[3]/a[3]")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(creditBuilderLoans);
+        actions.perform();
+        creditBuilderLoans.click();
+        Thread.sleep(500);
+    }
+
+    @And("^I scroll to view the \"Track Your Credit While You Build\" section$")
+    public void TrackYourCredit() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        Thread.sleep(500);
+        WebElement TrackYourCreditSection = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(TrackYourCreditSection);
+        actions.perform();
+    }
+
+    @And("^I select \"Credit Utilization\"$")
+    public void creditUtilization() throws Exception {
+        Thread.sleep(500);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement creditUtilization = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]/div[1]/ul/li[3]")));
+        creditUtilization.click();
+        WebElement creditUtilizationHeader = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]/div[2]/div[3]/div[3]/h6")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(creditUtilizationHeader);
+        actions.perform();
+    }
+
+    @And("^I change the credit utilization percentage to 20%$")
+    public void modifyPercentage() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement creditUtilizationSlider = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]/div[2]/div[3]/div[2]/div[2]")));
+        Actions move = new Actions(driver);
+        Action action = move.dragAndDropBy(creditUtilizationSlider, -112, 0).build();
+        action.perform();
+    }
+    @Then("^I should be able to see the grade is now displayed as B$")
+    public void verifyGrade() throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement creditGrade = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]/div[3]/div[3]/span[1]")));
+        String GradeDisplayed = creditGrade.getAttribute("textContent");
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolioGrade.jpg");
+        driver.close();
+        if (GradeDisplayed.equals("B")){
+            System.out.println("Test Passed!");
+        } else{
+            System.out.println("Test Failed");
+            Assert.fail();
+        }
+
+
+
+    }
 }
+
+
