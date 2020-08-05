@@ -14,6 +14,11 @@ Feature: Create a runnable test automation project
     Scenario Outline: Able to verify the portfolio types
     Given I am a new customer
     And access to MoneyLion website
+    When I hover on "Products" and click on "Auto investing" at the top of the webpage
+    And I scroll to view the personalised portfolio
+    Then there should be total of 7 portfolio available on the slider
+    When I select '<option>' portfolio on the slider
+    Then I should be able to see '<portfolioName>' displayed
     Examples:
       |option  | portfolioName |
       |first  | Steady Income Portfolio |
