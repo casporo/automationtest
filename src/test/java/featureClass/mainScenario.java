@@ -35,7 +35,7 @@ public class mainScenario {
     @And("^access to MoneyLion website$")
     public void accessing_MoneyLion_site() throws Throwable {
        driver.get("https://www.moneylion.com/");
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion.jpg");
+       screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion.jpg");
     }
 
     //=========================== Selenium codes for Scenario "Able to access MoneyLion about page successfully"============================================
@@ -44,7 +44,7 @@ public class mainScenario {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement AboutUsNavigation = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[3]/a")));
         AboutUsNavigation.click();
-
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\about_us.jpg");
         WebElement AboutUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[3]/div/ul/li[1]/a")));
         AboutUs.click();
     }
@@ -53,6 +53,7 @@ public class mainScenario {
     public void redirected_to_MoneyLion_page() throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[1]")));
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion_page.jpg");
 
     }
 
@@ -65,6 +66,7 @@ public class mainScenario {
         actions.moveToElement(ComeJoinUs);
         actions.perform();
 
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\cities.jpg");
         WebElement New_York = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[4]/div[2]/a[1]/div[2]")));
         String NYC = New_York.getAttribute("textContent");
 
@@ -76,6 +78,8 @@ public class mainScenario {
 
         WebElement Kuala_Lumpur = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[4]/div[2]/a[4]/div[2]")));
         String KL = Kuala_Lumpur.getAttribute("textContent");
+
+
 
         System.out.println(NYC);
         System.out.println(SF);
@@ -90,6 +94,7 @@ public class mainScenario {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement products = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[1]/a")));
         products.click();
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\products.jpg");
 
         WebElement autoInvesting = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[1]/div/ul/li[4]/a")));
         autoInvesting.click();
@@ -114,6 +119,7 @@ public class mainScenario {
 
         List<WebElement> portfolioList = driver.findElements(By.className("slider-step-dot"));
         System.out.println(portfolioList.size());
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolio_present.jpg");
 
         if(portfolioList.size() == 7){
             System.out.println("Test Passed!");
@@ -136,41 +142,41 @@ public class mainScenario {
         WebElement sliderOption6 = driver.findElement(By.xpath("/html/body/section[4]/div/div/div[1]/div/div[1]/span[6]"));
         WebElement sliderOption7 = driver.findElement(By.xpath("/html/body/section[4]/div/div/div[1]/div/div[1]/span[7]"));
         Actions move = new Actions(driver);
-
         if(options.equals("first")){
             Action action = move.dragAndDropBy(sliderOption1, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_first.jpg");
         }else if(options.equals("second")){
             Action action = move.dragAndDropBy(sliderOption2, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_second.jpg");
         }
         else if(options.equals("third")){
             Action action = move.dragAndDropBy(sliderOption3, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_third.jpg");
         }
         else if(options.equals("fourth")){
             Action action = move.dragAndDropBy(sliderOption4, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_fourth.jpg");
         }
         else if(options.equals("fifth")){
             Action action = move.dragAndDropBy(sliderOption5, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_fifth.jpg");
         }
         else if(options.equals("sixth")){
             Action action = move.dragAndDropBy(sliderOption6, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_six.jpg");
         }
         else if(options.equals("seventh")){
             Action action = move.dragAndDropBy(sliderOption7, 0, 0).build();
             action.perform();
-            System.out.println("Test Passed!");
+            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_seventh.jpg");
         }
+
     }
 
     @Then("^I should be able to see \'([^\"]*)\' displayed$")
@@ -212,6 +218,7 @@ public class mainScenario {
         Actions actions = new Actions(driver);
         actions.moveToElement(TrackYourCreditSection);
         actions.perform();
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\trackyourcredit.jpg");
     }
 
     @And("^I select \"Credit Utilization\"$")
@@ -224,6 +231,7 @@ public class mainScenario {
         Actions actions = new Actions(driver);
         actions.moveToElement(creditUtilizationHeader);
         actions.perform();
+        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\credit_utilisation.jpg");
     }
 
     @And("^I change the credit utilization percentage to 20%$")
