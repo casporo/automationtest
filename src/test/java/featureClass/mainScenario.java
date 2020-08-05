@@ -21,7 +21,6 @@ import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 
 public class mainScenario {
     WebDriver driver;
-    WebDriverWait wait;
 
     @Given("^I am a new customer$")
     public void new_customer() throws Throwable {
@@ -78,14 +77,11 @@ public class mainScenario {
 
         WebElement Kuala_Lumpur = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[4]/div[2]/a[4]/div[2]")));
         String KL = Kuala_Lumpur.getAttribute("textContent");
-
-
-
-        System.out.println(NYC);
-        System.out.println(SF);
-        System.out.println(SLC);
-        System.out.println(KL);
         driver.close();
+
+        if(!NYC.equals("New York City") || !SF.equals("San Francisco") || !SLC.equals("Salt Lake City") || !KL.equals("Kuala Lumpur")){
+            Assert.fail();
+        }
     }
 
     //=========================== Selenium codes for Scenario " Able to verify the portfolio types" ===========================================
@@ -121,10 +117,7 @@ public class mainScenario {
         System.out.println(portfolioList.size());
         screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolio_present.jpg");
 
-        if(portfolioList.size() == 7){
-            System.out.println("Test Passed!");
-        }else{
-            System.out.println("Test Failed");
+        if(portfolioList.size() != 7){
             Assert.fail();
         }
     }
@@ -176,7 +169,6 @@ public class mainScenario {
             action.perform();
             screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_seventh.jpg");
         }
-
     }
 
     @Then("^I should be able to see \'([^\"]*)\' displayed$")
@@ -186,10 +178,7 @@ public class mainScenario {
         WebElement selectedPortfolio = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.slider-item.is-active")));
         String displayedPortfolio = selectedPortfolio.getAttribute("textContent");
 
-        if(portfolioName.equals(displayedPortfolio)){
-            System.out.println("Test Passed!");
-        }else{
-            System.out.println("Test Fail as " + "Expected Result: "+ portfolioName + " not equal to Actual Result: " + displayedPortfolio);
+        if(!portfolioName.equals(displayedPortfolio)){
             driver.close();
             Assert.fail();
         }
@@ -250,15 +239,9 @@ public class mainScenario {
         String GradeDisplayed = creditGrade.getAttribute("textContent");
         screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolioGrade.jpg");
         driver.close();
-        if (GradeDisplayed.equals("B")){
-            System.out.println("Test Passed!");
-        } else{
-            System.out.println("Test Failed");
+        if (!GradeDisplayed.equals("B")) {
             Assert.fail();
         }
-
-
-
     }
 }
 
