@@ -1,0 +1,5 @@
+This is a readme file of the test automation codes. The codes are broken down to the following
+1) Feature file for acceptance test under test.features
+2) Selenium codes to run the acceptance test under mainScenario.java class
+
+An additional module is added called screenshot class, this is a separate class to handle screenshot capture for each test runs. Screenshots are saved under screenshots folder.
