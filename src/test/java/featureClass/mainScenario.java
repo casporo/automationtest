@@ -1,11 +1,11 @@
 package featureClass;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.en.And;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +17,6 @@ import java.util.List;
 
 import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 
-
 public class mainScenario {
     WebDriver driver;
 
@@ -28,6 +27,8 @@ public class mainScenario {
     //======= Scenario 3: Able to verify grade for Credit Utilization =====================================================================================
 
     //=========================== Main Selenium Codes to start ChromeDriver and to open MoneyLion site" ===================================================
+
+
     @Given("^I am a new customer$")
     public void new_customer() throws Throwable {
 
@@ -38,7 +39,9 @@ public class mainScenario {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
+
     }
+
 
     @And("^access to MoneyLion website$")
     public void accessing_MoneyLion_site() throws Throwable {
@@ -48,6 +51,7 @@ public class mainScenario {
     }
 
     //=========================== Selenium codes for Scenario "Able to access MoneyLion about page successfully"============================================
+
     @When("^I hover on \"About Us\" and click \"About Us\" at the top of the webpage$")
     public void hoverOn_AboutUs() throws Throwable {
 

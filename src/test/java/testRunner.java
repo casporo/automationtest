@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
                features = "src/test/java/features",//#Path for the Feature files Folder.
                 // plugin ={"pretty","html:reports/test-report"},#Path for the Reports Html Folder#
         //glue = {"stepDefinitions"},
-               tags= {"@Scenario2"})//#Declaring multiple Feature names of files#
+               tags= {"@Scenario1"})//#Declaring multiple Feature names of files#
 
 public class testRunner {
 }
