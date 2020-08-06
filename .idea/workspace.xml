@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00de2e3-0c82-4b51-8f3c-1bd6d281bd75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/reports/APIReport.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/reports/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureClass/mainScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureClass/mainScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screenshots/cities.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/cities.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,7 @@
       <recent name="D:\J Projects\moneylion\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DummyAPI">
+  <component name="RunManager" selected="JUnit.testRunner">
     <configuration name="APIHeaderSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="API.APIHeaderSearcher" />
       <module name="moneylion" />
@@ -126,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testRunner" />
         <item itemvalue="JUnit.DummyAPI" />
         <item itemvalue="TestNG.ExtentReportTest" />
         <item itemvalue="Application.sampleAPI" />
         <item itemvalue="Application.APIHeaderSearcher" />
-        <item itemvalue="JUnit.testRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596711405991</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added Test Report for API Testing">
+      <created>1596713183498</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596713183498</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -258,7 +266,9 @@
     <MESSAGE value="Added readme file" />
     <MESSAGE value="Added additional comments and code cleanup" />
     <MESSAGE value="Added API testing file +  Test Reporting (TestNG) and Extent Report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added API testing file +  Test Reporting (TestNG) and Extent Report" />
+    <MESSAGE value="Added Test Report" />
+    <MESSAGE value="Added Test Report for API Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Test Report for API Testing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596694468628">
@@ -277,30 +287,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596694243339" />
-    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1596711403473">
+    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1596713182745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596711403473" />
+    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596713182745" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1596525841293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596525841293" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1596713066490">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1596714443351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1596713066490">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596714443351" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1596714443351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1596713066490">
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596714443351" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1596714443351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1596713066490">
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596714443351" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1596714443351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596714443351" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1596706149109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -329,10 +339,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596690515912" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596711469848">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596714609466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596711469848" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596714609466" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596678514860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

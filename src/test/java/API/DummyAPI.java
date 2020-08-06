@@ -25,12 +25,14 @@ public class DummyAPI {
 
     static ExtentTest test;
     static ExtentReports report;
+
+    // Create object of extent report and specify the report file path.
     @BeforeClass
     public static void startTest()
     {
         String extentReportFile = "./src/test/reports/APIReport.html";
         report = new ExtentReports(extentReportFile);
-        test = report.startTest("ExtentDemo");
+        test = report.startTest("API Testing");
     }
 
     //Scenario 1: Create a enw employee entry with First name, Last Name, Salary and Age
@@ -97,6 +99,7 @@ public class DummyAPI {
         }
     }
 
+    //Generate Test Report
     @AfterClass
     public static void endTest()
     {

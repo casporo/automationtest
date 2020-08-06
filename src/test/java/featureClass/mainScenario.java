@@ -14,12 +14,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
-
 import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 
 public class mainScenario {
-    WebDriver driver;
-
     //==================================================== JAVA CLASS GUIDE ===============================================================================
     //======= This file contains the Selenium code to run the following scenarios: ========================================================================
     //======= Scenario 1: Able to access MoneyLion about page successfully ================================================================================
@@ -28,26 +25,22 @@ public class mainScenario {
 
     //=========================== Main Selenium Codes to start ChromeDriver and to open MoneyLion site" ===================================================
 
-
+    WebDriver driver;
     @Given("^I am a new customer$")
     public void new_customer() throws Throwable {
-
         // Starts ChromeDriver for Selenium
         WebDriverManager.getInstance(CHROME).setup();
-
         // Opens ChromeDriver in maximised window
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
-
     }
-
 
     @And("^access to MoneyLion website$")
     public void accessing_MoneyLion_site() throws Throwable {
         //Driver accessing MoneyLion site
-       driver.get("https://www.moneylion.com/");
-       screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion.jpg");
+        driver.get("https://www.moneylion.com/");
+       screenshot.takeSnapShot(driver, "./src/test/screenshots/moneylion.jpg");
     }
 
     //=========================== Selenium codes for Scenario "Able to access MoneyLion about page successfully"============================================
@@ -60,7 +53,7 @@ public class mainScenario {
         WebElement AboutUsNavigation = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[3]/a")));
         //Clicks About Us navigation tab
         AboutUsNavigation.click();
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\about_us.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/about_us.jpg");
         //Waits for About Us button to pop up under About Us tab
         WebElement AboutUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[3]/div/ul/li[1]/a")));
         //Clicks About Us button in the About Us tab
@@ -72,7 +65,7 @@ public class mainScenario {
         //Waits for About Us page to load before proceeding
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[1]")));
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\moneylion_page.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/moneylion_page.jpg");
     }
 
     @And("^I should be able to see \"Offices located in New York, San Francisco, Salt Lake City, and Kuala Lumpur\" text displayed under \"COME JOIN US\"$")
@@ -84,7 +77,7 @@ public class mainScenario {
         Actions actions = new Actions(driver);
         actions.moveToElement(ComeJoinUs);
         actions.perform();
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\cities.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/cities.jpg");
         //Scans for New York element and extract text from "New York"
         WebElement New_York = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[4]/div[2]/a[1]/div[2]")));
         String NYC = New_York.getAttribute("textContent");
@@ -113,7 +106,7 @@ public class mainScenario {
         WebElement products = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[1]/a")));
         //Clicks on Product navigation tab
         products.click();
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\products.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/products.jpg");
         //Waits for Auto investing link to be present
         WebElement autoInvesting = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[1]/nav/li[1]/div/ul/li[4]/a")));
         //Clicks auto investing link
@@ -140,7 +133,7 @@ public class mainScenario {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("slider-step-dot")));
         //Scans through the slider element can provides a count of portfolio present
         List<WebElement> portfolioList = driver.findElements(By.className("slider-step-dot"));
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolio_present.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/portfolio_present.jpg");
         //Verification if portfolio size is not equal to 7, test result is set to "Fail"
         if(portfolioList.size() != 7){
             Assert.fail();
@@ -164,42 +157,42 @@ public class mainScenario {
             //Moves slider to "Steady Income"
             Action action = move.dragAndDropBy(sliderOption1, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_first.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_first.jpg");
         }else if(options.equals("second")){
             //Moves slider to "Conservative"
             Action action = move.dragAndDropBy(sliderOption2, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_second.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_second.jpg");
         }
         else if(options.equals("third")){
             //Moves slider to "Moderately Conservative"
             Action action = move.dragAndDropBy(sliderOption3, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_third.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_third.jpg");
         }
         else if(options.equals("fourth")){
             //Moves slider to "Moderate"
             Action action = move.dragAndDropBy(sliderOption4, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_fourth.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_fourth.jpg");
         }
         else if(options.equals("fifth")){
             //Moves slider to "Moderately Aggressive"
             Action action = move.dragAndDropBy(sliderOption5, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_fifth.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_fifth.jpg");
         }
         else if(options.equals("sixth")){
             //Moves slider to "Aggressive"
             Action action = move.dragAndDropBy(sliderOption6, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_six.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_six.jpg");
         }
         else if(options.equals("seventh")){
             //Moves slider to "Equity Only"
             Action action = move.dragAndDropBy(sliderOption7, 0, 0).build();
             action.perform();
-            screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\selected_portfolio_seventh.jpg");
+            screenshot.takeSnapShot(driver, "./src/test/screenshots/selected_portfolio_seventh.jpg");
         }
     }
 
@@ -245,7 +238,7 @@ public class mainScenario {
         Actions actions = new Actions(driver);
         actions.moveToElement(TrackYourCreditSection);
         actions.perform();
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\trackyourcredit.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/trackyourcredit.jpg");
     }
 
     @And("^I select \"Credit Utilization\"$")
@@ -263,7 +256,7 @@ public class mainScenario {
         Actions actions = new Actions(driver);
         actions.moveToElement(creditUtilizationHeader);
         actions.perform();
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\credit_utilisation.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/credit_utilisation.jpg");
     }
 
     @And("^I change the credit utilization percentage to 20%$")
@@ -283,13 +276,16 @@ public class mainScenario {
         WebElement creditGrade = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section[3]/div[2]/div[3]/div[3]/span[1]")));
         //Extracts text from Credit Grade Element
         String GradeDisplayed = creditGrade.getAttribute("textContent");
-        screenshot.takeSnapShot(driver, "D:\\J Projects\\moneylion\\src\\test\\screenshots\\portfolioGrade.jpg");
+        screenshot.takeSnapShot(driver, "./src/test/screenshots/portfolioGrade.jpg");
         driver.close();
         //Verifies whether Credit Grade is shown as expected
         if (!GradeDisplayed.equals("B")) {
             Assert.fail();
         }
     }
+
+
+
 }
 
 
