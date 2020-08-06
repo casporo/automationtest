@@ -21,6 +21,7 @@ import com.relevantcodes.extentreports.LogStatus;
 @RunWith(JUnitParamsRunner.class)
 public class DummyAPI {
 
+    // Input variables and data
     String name = "John Wick", salary = "15000", age = "23";
 
     static ExtentTest test;
@@ -30,7 +31,7 @@ public class DummyAPI {
     @BeforeClass
     public static void startTest()
     {
-        String extentReportFile = "./src/test/reports/APIReport.html";
+        String extentReportFile = "./src/test/reports/API_Report.html";
         report = new ExtentReports(extentReportFile);
         test = report.startTest("API Testing");
     }

@@ -1,5 +1,82 @@
-This is a readme file of the test automation codes. The codes are broken down to the following
-1) Feature file for acceptance test under test.features
-2) Selenium codes to run the acceptance test under mainScenario.java class
+General Introduction:
+Welcome to my GitHub repository. To summarise, this repository contains test automation demo for Selenium WebDriver and automated API automation test. The scenario are as follows:
 
-An additional module is added called screenshot class, this is a separate class to handle screenshot capture for each test runs. Screenshots are saved under screenshots folder.
+Section 1
+Create a runnable test automation project.Test should verify the following scenarios
+
+Scenario 1: Able to access MoneyLion about page successfully
+Given I am a new customer
+And access to MoneyLion website
+When I hover on "About Us" and click "About Us" at the top of the webpage
+Then I should be redirected to the MoneyLion page
+And I should be able to see "Offices located in New York, San Francisco, Salt Lake City, and Kuala Lumpur" text displayed under "COME JOIN US"
+
+Scenario 2: Able to verify the portfolio types
+Given I am a new customer
+And access to MoneyLion website
+When I hover on "Products" and click on "Auto investing" at the top of the webpage
+And I scroll to view the personalised portfolio
+Then there should be total of 7 portfolio available on the slider
+When I select '<option>' portfolio on the slider
+Then I should be able to see '<portfolioName>' displayed
+Examples:
+|option  | portfolioName |
+|first  | Steady Income Portfolio |
+|fourth  | Moderate Portfolio |
+|seventh  | Equity Only Portfolio |
+
+Scenario 3: Able to verify grade for Credit Utilization
+Given I am a new customer
+And access to MoneyLion website
+When I click on "Credit Builder Loans" at the bottom of the page
+And I scroll to view the "Track Your Credit While You Build" section
+And I select "Credit Utilization"
+And I change the credit utilization percentage to 20%
+Then I should be able to see the grade is now displayed as B
+
+Section 2
+Create a runable automated API automation tests by referring to the following API documentation:-
+http://dummy.restapiexample.com
+
+Scenario 1:
+Using: http://dummy.restapiexample.com/api/v1/create
+Create a enw employee entry with First name, Last Name, Salary and Age
+Scenario 2:
+Using: http://dummy.restapiexample.com/api/v1/employees
+Verify entry created in Scenario 1 exist on employee list
+
+---- Setup ----
+1) Download latest release from this repository
+2) Unpack file and import as existing project into your IDE
+3) Once unpacking is complete. go to POM.XML, right click it and clean install Maven. For terminal commands: mvn clean install
+
+----- File Architecture ----
+The Java classes for Selenium Automation and API automation are located under ./src/test/java. A breakdown are as follows:
+1) For Selenium automation the files are split into feature file and class file. The feature file for selenium automation is test.features (under features folder) while the java class is mainScenario (under featureClass).
+The runner file is testRunner (which you can see after opening ./src/test).
+2) For API automation, the file is located under DummyAPI (under API folder).
+Additional Notes:
+You will notice these two extra files, APIHeaderSearcher and Screenshot class. APIHeaderSearcher is to look for a particular header while Screenshot class is a screenshot module to capture screenshots.
+
+---- How to Run Test Automation File ----
+
+For Section 1:
+1) Open TestRunner File.
+2) Under tags, replace it with the following:
+- To run Scenario 1, replace tag as "@Scenario1"
+- To run Scenario 2, replace tag as "@Scenario2"
+- To run Scenario 3, replace tag as "@Scenario3"
+3) Run TestRunner file
+4) Wait for test execution to complete to check on test report and test screenshots. The screenshots are located at ./src/test/screenshots
+
+For Section 2:
+1) Run DummyAPI.java file. The file is located at ./src/test/reports/API_Report.html. You may modify the input data (located at Input variables)
+2) Wait for execution completion.
+3) Test Report should be generated as API_Report.html. The folder location is at ./src/test/reports
+Sidenote: The compiler should show the test report during execution as JUnit tags are embedded inside the Java codes.
+
+Additional Notes:
+1) The compiler should show the test report during execution as JUnit tags are embedded inside the Java codes.
+2) Assert.fail() was embedded into the Java classes to produce a Test failure reading. An error message is included to denote why the test failed.
+3) Test Report is only exported for API testing but not for Selenium testing as ExtentReports codes causes Selenium webDriver to stop functioning midtest.
+4) Thread(sleep) was included in some of the Java classes for Selenium testing due to the presence of Your Credit Journey Builder that keeps popping up and interfering with the window.
