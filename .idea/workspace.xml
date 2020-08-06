@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00de2e3-0c82-4b51-8f3c-1bd6d281bd75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/API/APIHeaderSearcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/reports/APIReport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/reports/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneylion/src/test/screenshots/cities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/featureClass/mainScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureClass/mainScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/screenshots/about_us.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/about_us.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/screenshots/cities.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/cities.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/moneylion-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,10 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/J Projects/moneylion/src/test/java/featureClass/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExtentReportTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="moneylion" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/featureClass/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="API" />
+      <option name="MAIN_CLASS_NAME" value="API.ExtentReportTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -134,10 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DummyAPI" />
+        <item itemvalue="TestNG.ExtentReportTest" />
         <item itemvalue="Application.sampleAPI" />
         <item itemvalue="Application.APIHeaderSearcher" />
         <item itemvalue="JUnit.testRunner" />
-        <item itemvalue="TestNG.D:/J Projects/moneylion/src/test/java/featureClass/testng.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596624232153</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added API testing file +  Test Reporting (TestNG) and Extent Report">
+      <created>1596711405991</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596711405991</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -257,7 +257,8 @@
     <MESSAGE value="Added comments to explain the functionality of each code" />
     <MESSAGE value="Added readme file" />
     <MESSAGE value="Added additional comments and code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added additional comments and code cleanup" />
+    <MESSAGE value="Added API testing file +  Test Reporting (TestNG) and Extent Report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added API testing file +  Test Reporting (TestNG) and Extent Report" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596694468628">
@@ -276,30 +277,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596694243339" />
-    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1596624231272">
+    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1596711403473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596624231272" />
+    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596711403473" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1596525841293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596525841293" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1596711324474">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1596713066490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596711324474" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1596711324474">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1596713066490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596711324474" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1596711324473">
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1596713066490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596711324473" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1596711324474">
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1596713066490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596711324474" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596713066490" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1596706149109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,10 +329,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596690515912" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596624251672">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596711469848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596624251672" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596711469848" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596678514860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
