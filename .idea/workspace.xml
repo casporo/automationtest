@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e00de2e3-0c82-4b51-8f3c-1bd6d281bd75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API/APIHeaderSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/APIHeaderSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/DummyAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/APIReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/reports/API_Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/moneylion_page.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/drivers/chromedriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/featureClass/mainScenario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneylion.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screenshots/moneylion.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/screenshots/moneylion.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/API/APIHeaderSearcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/API/APIHeaderSearcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/moneylion.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +47,18 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -150,6 +157,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -262,6 +270,17 @@
     <option name="localTasksCounter" value="15" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First COmmit" />
@@ -280,95 +299,5 @@
     <MESSAGE value="Added Test Report for API Testing" />
     <MESSAGE value="Code Refactor" />
     <option name="LAST_COMMIT_MESSAGE" value="Code Refactor" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="724" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596694468628">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="724" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596694468628" />
-    <state x="599" y="207" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1596526638255">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="599" y="207" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596526638255" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1596690639990">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596690639990" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596694243339">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596694243339" />
-    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1596714627132">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596714627132" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1596525841293">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596525841293" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1596715158201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596715158201" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1596715158201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596715158201" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1596715158201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596715158201" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1596715158201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596715158201" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1596706149109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596706149109" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1596706149109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596706149109" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1596706149109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596706149109" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1596706149109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596706149109" />
-    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1596525556188">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596525556188" />
-    <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1596689784003">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="490" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596689784003" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1596690515912">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596690515912" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596714659681">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596714659681" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596678514860">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596678514860" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596525703896">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596525703896" />
-    <state x="591" y="73" width="737" height="894" key="find.popup" timestamp="1596610767779">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="591" y="73" width="737" height="894" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596610767779" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596715633974">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596715633974" />
   </component>
 </project>
